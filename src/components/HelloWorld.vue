@@ -10,7 +10,7 @@
         placeholder="Search for any Ip address or domain"
       />
     </div>
-    <div id="second" v-if="loca != null" class="d-flex justify-content-center p-5">
+    <div id="second" v-if="loca != null" class="d-flex justify-content-center p-3">
       <div class="mx-5 text-left">
         <p>IP ADDRESS</p>
         <h6>{{ loca.ip }}</h6>
@@ -28,7 +28,7 @@
     <div v-else></div>
     <div>
       <GmapMap
-        :center="{ lat: 10, lng: 10 }"
+        :center="{ lat: 4.8156, lng: 7.0498 }"
         :zoom="8"
         map-type-id="hybrid"
         style="width: 100%; height: 420px"
@@ -84,7 +84,7 @@ input {
 #top {
   position: absolute;
   top: 60px;
-  left: 28%;
+  left: 33%;
   right: auto;
 }
 #mapid {
@@ -92,7 +92,10 @@ input {
 }
 #second{
   position: absolute;
-  top: 10px;
+  top: 160px;
   background-color: white;
+  z-index: 1000;
+  border-radius: 20px;
+  left: 25%;
 }
 </style>
